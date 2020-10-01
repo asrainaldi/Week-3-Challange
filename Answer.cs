@@ -52,17 +52,22 @@ namespace ConsoleApp2
                 else if (number >= 100 && number <= 999)
                 {
                     int numberHunreds = number / 100;
-                    int numberTens = number - ((number / 100) * 100) ;
-                    string results = FindTens.Tens(numberTens);
+                    int numberTens = (number - ((number / 100) * 100));
+                    if (numberTens < 20)
+                        tens = zeroToNineten[numberTens];
+                    else
+                    {
+                        tens = FindTens.Tens(numberTens);
+                    }
                     result = zeroToNineten[numberHunreds];
-                    result = result + " " + hundred[0] + " and " + results;
-
+                    if (numberTens == 0)
+                        result = result + " " + hundred[0];
+                    else
+                        result = result + " " + hundred[0] + " and " + tens;
                 }
 
                 return result;
             }
-
-
 
             public static string[] zeroToNineten =
             {
