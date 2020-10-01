@@ -7,8 +7,6 @@ namespace ConsoleAppTdpChallangeWeek3
         static void Main(string[] args)
         {
             var challange = new Challange();
-            //var number = Console.ReadLine();
-
 
             while (true)
             {
