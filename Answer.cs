@@ -15,7 +15,6 @@ namespace ConsoleAppTdpChallangeWeek3
                 var number = Console.ReadLine();
                 Console.WriteLine(challange.NumberConverter(int.Parse(number)));
             }
-
         }
 
         public class FindTens
@@ -80,10 +79,6 @@ namespace ConsoleAppTdpChallangeWeek3
 
                     if (numberofhundred >= 100)
                         hundreds = zeroToNineten[(numberofhundred / 100)];
-                    //else
-                    //{
-                    //    hundreds = FindTens.Tens((numberofhundred / 10));
-                    //}
 
                     if (numberoftens < 20)
                         tens = zeroToNineten[numberoftens];
@@ -92,7 +87,6 @@ namespace ConsoleAppTdpChallangeWeek3
                         tens = FindTens.Tens(numberoftens);
                     }
 
-
                     result = zeroToNineten[(number / 1000)] + " " + thousand[0];
 
                     if(hundreds != "")
@@ -100,7 +94,6 @@ namespace ConsoleAppTdpChallangeWeek3
 
                     if (numberoftens != 0)
                         result = result +" " + "and " + tens;
-
                 }
 
                 return result;
