@@ -9,7 +9,6 @@ namespace TdpWeek3
         public string NumberConverter(int number)
         {
             string result = "";
-            bool andUsed = false;
             bool tensOnly = false;
 
             if (number == 0)
@@ -28,21 +27,16 @@ namespace TdpWeek3
             if (number >= 20 && number <= 99)
             {
                 if (result != "")
-                {
                     result = result + "and " + twentyToNinety[(number / 10 - 2)] + " ";
-                    andUsed = true;
-                }
                 else
-                {
                     result = twentyToNinety[(number / 10 - 2)] + " ";
-                    tensOnly = true;
-                }
+                tensOnly = true;
 
                 number = number % 10;
             }
             if (number < 20 & number > 0)
             {
-                if (result != "" && andUsed == false && tensOnly == false)
+                if (result != "" && tensOnly == false)
                     result = result + "and " + zeroToNineten[number];
                 else
                     result = result + zeroToNineten[number];
