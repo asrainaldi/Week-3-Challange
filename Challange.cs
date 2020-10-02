@@ -21,13 +21,13 @@ namespace TdpWeek3
             }
             if (number >= 100 && number < 9999)
             {
-                result = result + zeroToNineten[(number / 100)] + " " + hundred[0] + " ";
+                result += zeroToNineten[(number / 100)] + " " + hundred[0] + " ";
                 number = number % 100;
             }
             if (number >= 20 && number <= 99)
             {
                 if (result != "")
-                    result = result + "and " + twentyToNinety[(number / 10 - 2)] + " ";
+                    result += "and " + twentyToNinety[(number / 10 - 2)] + " ";
                 else
                     result = twentyToNinety[(number / 10 - 2)] + " ";
                 tensOnly = true;
@@ -37,9 +37,9 @@ namespace TdpWeek3
             if (number < 20 & number > 0)
             {
                 if (result != "" && tensOnly == false)
-                    result = result + "and " + zeroToNineten[number];
+                    result += "and " + zeroToNineten[number];
                 else
-                    result = result + zeroToNineten[number];
+                    result += zeroToNineten[number];
             }
 
             return result;
