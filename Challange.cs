@@ -19,12 +19,12 @@ namespace TdpWeek3
                 result = zeroToNineten[(number / 1000)] + " " + thousand[0] + " ";
                 number = number % 1000;
             }
-            if (number >= 100 && number < 9999)
+            if (number >= 100)
             {
                 result += zeroToNineten[(number / 100)] + " " + hundred[0] + " ";
                 number = number % 100;
             }
-            if (number >= 20 && number <= 99)
+            if (number >= 20)
             {
                 if (result != "")
                     result += "and " + twentyToNinety[(number / 10 - 2)] + " ";
